@@ -1,0 +1,42 @@
+<div class="container">
+  <form [formGroup]="form" (submit)="send()">
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input type="text" class="form-control" id="email" formControlName="email">
+      <app-validate-message [error]="form.get('email').errors"></app-validate-message>
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" formControlName="password">
+      <app-validate-message [error]="form.get('password').errors"></app-validate-message>
+    </div>
+    <div class="mb-3">
+      <label for="youtube" class="form-label">Youtube</label>
+      <input type="text" class="form-control" id="youtube" formControlName="youtube">
+      <app-validate-message [error]="form.get('youtube').errors"></app-validate-message>
+    </div>
+    <label for="select" class="form-label">Tipo de vehiculo</label>
+    <select class="form-select" id="select" name="select" formControlName="type" (change)="changeType()">
+      <option value="Moto">Moto</option>
+      <option value="Carro">Carro</option>
+      <option value="Ninguno" selected>Ninguno</option>
+    </select>
+    <div class="mt-3" *ngIf="form.value.type === 'Carro'">
+      <label for="color" class="form-label">color</label>
+      <input type="text" class="form-control" id="color" formControlName="color">
+      <app-validate-message [error]="form.get('color').errors"></app-validate-message>
+    </div>
+    <div class="mb-3 form-check mt-3">
+      <input type="checkbox" class="form-check-input" id="terms" formControlName="terms">
+      <label class="form-check-label" for="terms">Check me out</label>
+      <app-validate-message [error]="form.get('terms').errors"></app-validate-message>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <div class="mt-3">
+    Valido: {{form.value | json}}
+  </div>
+</div>
+
+

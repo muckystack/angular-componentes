@@ -1,0 +1,13 @@
+<!-- {{ error | json }} -->
+
+<div *ngIf="error !== null">
+  <div *ngIf="error?.pattern?.requiredPattern">
+    <i class="text-danger">No es una dirección correcta</i>
+  </div>
+  <div *ngIf="error?.required">
+    <i class="text-danger">El campo es requerido</i>
+  </div>
+  <div *ngIf="error?.minlength">
+    <i class="text-danger">No cumples con los caracteres minimos, ingresaste {{ error?.minlength?.actualLength }} de {{ error?.minlength?.requiredLength }}</i>
+  </div>
+</div>
