@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  outline: none;
+}
+select.form-control:focus,
+textarea.form-control:focus,
+input.form-control:focus
+{
+  box-shadow: none;
+}
+input.ng-touched.ng-invalid {
+  border: solid 2px tomato;
+}
+
+/* input.ng-valid {
+  border: solid 2px green;
+} */
