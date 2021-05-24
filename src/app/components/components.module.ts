@@ -8,6 +8,7 @@ import { ErrorTailorModule } from '@ngneat/error-tailor';
 import { MyLoginFormErrorComponent } from './my-login-form-error/my-login-form-error.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { BreakImgDirective } from './directives/break-img.directive';
+import { ViewChildDOMComponent } from './view-child-dom/view-child-dom.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { BreakImgDirective } from './directives/break-img.directive';
     MyLoginFormErrorComponent,
     DirectivesComponent,
     BreakImgDirective,
+    ViewChildDOMComponent,
   ],
   imports: [
     CommonModule,
@@ -32,6 +34,7 @@ import { BreakImgDirective } from './directives/break-img.directive';
     LoginFormErroresComponent,
     MyLoginFormErrorComponent,
     DirectivesComponent,
+    ViewChildDOMComponent
   ],
 })
 export class ComponentsModule {}

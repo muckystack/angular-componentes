@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="wrapper">
+    <h1><b>Angular</b> manipulación del DOM</h1>
+    <a href="#" (click)="change()">Click me!</a>
+
+    <div class="block mt-5 mb-5">
+      <span #asTitle id="title">{{ data.text }}</span>
+    </div>
+
+    <div class="block">
+      <img #asImage [src]="data.url" class="img" alt="">
+    </div>
+  </div>
+</div>
