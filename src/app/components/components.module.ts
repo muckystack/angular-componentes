@@ -6,23 +6,32 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoginFormErroresComponent } from './login-form-errores/login-form-errores.component';
 import { ErrorTailorModule } from '@ngneat/error-tailor';
 import { MyLoginFormErrorComponent } from './my-login-form-error/my-login-form-error.component';
-
-
+import { DirectivesComponent } from './directives/directives.component';
+import { BreakImgDirective } from './directives/break-img.directive';
 
 @NgModule({
-  declarations: [LoginFormComponent, LoginFormErroresComponent, MyLoginFormErrorComponent],
+  declarations: [
+    LoginFormComponent,
+    LoginFormErroresComponent,
+    MyLoginFormErrorComponent,
+    DirectivesComponent,
+    BreakImgDirective,
+  ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     WidgetsModule,
     ErrorTailorModule.forRoot({
       errors: {
-        useValue: {
-          
-        },
+        useValue: {},
       },
     }),
   ],
-  exports: [LoginFormComponent, LoginFormErroresComponent, MyLoginFormErrorComponent],
+  exports: [
+    LoginFormComponent,
+    LoginFormErroresComponent,
+    MyLoginFormErrorComponent,
+    DirectivesComponent,
+  ],
 })
 export class ComponentsModule {}

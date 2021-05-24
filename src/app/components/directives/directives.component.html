@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="card m-2" style="width: 18rem;" *ngFor="let pokemon of pokemons">
+      <img [src]="pokemon.img" appBreakImg urlCustom="https://cdn3.josefacchin.com/wp-content/uploads/2018/09/http-not-found-error-404.png" class="card-img-top p-5" [alt]="pokemon.name">
+      <div class="card-body">
+        <h5 class="card-title">{{ pokemon.name | uppercase }}</h5>
+        <p class="card-text"><span *ngFor="let ability of pokemon.abilities">{{ ability }}, </span></p>
+        <a [href]="pokemon.url" target="_blank" class="btn btn-primary">Ver json</a>
+      </div>
+    </div>
+  </div>
+</div>
