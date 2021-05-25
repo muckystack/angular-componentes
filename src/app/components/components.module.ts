@@ -9,6 +9,8 @@ import { MyLoginFormErrorComponent } from './my-login-form-error/my-login-form-e
 import { DirectivesComponent } from './directives/directives.component';
 import { BreakImgDirective } from './directives/break-img.directive';
 import { ViewChildDOMComponent } from './view-child-dom/view-child-dom.component';
+import { ImplementPipesComponent } from './implement-pipes/implement-pipes.component';
+import { MostrarMilesPipe } from '../pipes/mostrar-miles.pipe';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { ViewChildDOMComponent } from './view-child-dom/view-child-dom.component
     DirectivesComponent,
     BreakImgDirective,
     ViewChildDOMComponent,
+    ImplementPipesComponent,
+    MostrarMilesPipe,
   ],
   imports: [
     CommonModule,
@@ -34,7 +38,8 @@ import { ViewChildDOMComponent } from './view-child-dom/view-child-dom.component
     LoginFormErroresComponent,
     MyLoginFormErrorComponent,
     DirectivesComponent,
-    ViewChildDOMComponent
+    ViewChildDOMComponent,
+    ImplementPipesComponent,
   ],
 })
 export class ComponentsModule {}
