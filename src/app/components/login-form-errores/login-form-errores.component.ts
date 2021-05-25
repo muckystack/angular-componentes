@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login-form-errores',
@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: [],
 })
 export class LoginFormErroresComponent implements OnInit {
-  public form: FormGroup;
+  public form: any;
 
   constructor(private formBuilder: FormBuilder) {}
 

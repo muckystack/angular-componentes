@@ -20,7 +20,7 @@ export class DirectivesComponent implements OnInit {
 
   getInfoPokeApi(pokemonId: number) {
     this._pokemonapiService.getInfoPokeApi(pokemonId).subscribe((response) => {
-      const abilities = response.abilities.map((item) => {
+      const abilities = response.abilities.map((item: any) => {
         return item.ability.name;
       });
 

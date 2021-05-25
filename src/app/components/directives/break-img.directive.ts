@@ -10,7 +10,7 @@ import {
   selector: '[appBreakImg]',
 })
 export class BreakImgDirective implements OnInit {
-  @Input() urlCustom: String;
+  @Input() urlCustom: String = '';
 
   constructor(private elementRef: ElementRef) {}
 

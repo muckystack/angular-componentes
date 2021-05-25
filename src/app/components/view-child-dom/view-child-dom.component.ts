@@ -12,10 +12,10 @@ import {
   styles: [],
 })
 export class ViewChildDOMComponent implements OnInit {
-  @ViewChild('asTitle') title: ElementRef;
-  @ViewChild('asImage') image: ElementRef;
+  @ViewChild('asTitle') title: ElementRef | any;
+  @ViewChild('asImage') image: ElementRef | any;
 
-  public data: DataModel;
+  public data: DataModel = new DataModel();
 
   constructor(private renderer2: Renderer2) {}
 

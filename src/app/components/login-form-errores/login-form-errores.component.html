@@ -3,7 +3,7 @@
     <div class="mb-3">
       <label for="email" class="form-label">Email address</label>
       <input type="text" class="form-control" id="email" formControlName="email" [controlErrorsTpl]="error">
-      <ng-container *ngTemplateOutlet="errorPattern;context:{error:form.get('email').errors}"></ng-container>
+      <ng-container *ngTemplateOutlet="errorPattern;context:{error:form.get('email').errors || null}"></ng-container>
     </div>
     <div class="mb-3">
       <label for="password" class="form-label">Password</label>
